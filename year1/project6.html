@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Roboto+Mono" rel="stylesheet">
+    <nav class="navbar navbar-light bg-faded" style="background-color: #dddddd;">
+        <a class="navbar-brand" href="../">
+            Madeline Johnston
+        </a>
+    </nav>
+
+    <div id="container" class="col-12">
+        <div class="col-lg-10 offset-lg-1">
+            <div id="content" class="animate_bottom">
+
+                <div class="col-lg-8 offset-lg-2" style="text-align: center;">
+                    <h1 class="headline">Project 6</h1>
+                    <hr width=50%>
+                    <div class="line_break">
+                    </div>
+                    <p class="">
+                        Project 6 of first year was the culmination of all we had learnt throughout first year.
+                        The project involved site analysis of the materials that were present within our site in Tavistock, Devon.
+                        As Tavistock is an UNESCO world heritage site I chose to design a museum,
+                        with space on the first floor for an academic researching the area to stay temporarily.
+                        All final work was hand drawn at a variety of scales. (Images are not to scale).
+                    </p>
+                    <div class="line_break">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <!-- row 1 -->
+                <div class="content_row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <img src="../pictures/year1/project6/site perspective.jpg" style="width:100%; max-height: 750px; object-fit:cover;">
+                        <p class="notes">
+                            Site perspective, part of a design studio task exploring different techniques to show the existing site.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- row 2 -->
+                <div class="content_row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <img src="../pictures/year1/project6/site section2.jpg" style="width:100%; max-height: 750px; object-fit:cover;">
+                        <p class="notes">
+                            Site section through canal, an interesting feature of the site. The canal was used to transport the ore from mines within Devon and Cornwall.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- row 3 -->
+                <div class="content_row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <img src="../pictures/year1/project6/building section1.jpg" style="width:100%; max-height: 750px; object-fit:cover;">
+                        <p class="notes">
+                            Section through skylight feature of proposed design. The skylight brings natural light down to highlight a museum exhibition piece.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- row 4 -->
+                <div class="content_row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <img src="../pictures/year1/project6/building section2.jpg" style="width:100%; max-height: 750px; object-fit:cover;">
+                        <p class="notes">
+                            Section through canal with my design. This drawing shows the relationship between the public pathway to the left of the canal and my proposal.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- row 5 -->
+                <div class="content_row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <img src="../pictures/year1/project6/model.jpg" style="width:100%; max-height: 750px; object-fit:cover;">
+                        <p class="notes">
+                            Handmade chunk model of my design, showing the skylight feature.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="line_break">
+                    &nbsp;
+                </div>
+
+                <div style="text-align:center">
+                    <a href="../profile">
+                        <p class="notes_lg">
+                            Madeline Johnston
+                        </p>
+                        <p id="portfolio_year" class="notes">
+
+                        </p>
+                    </a>
+                </div>
+
+                <div class="line_break">
+                    &nbsp;
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    let currentTime = new Date();
+    let year = currentTime.getFullYear();
+    document.getElementById('portfolio_year').innerHTML = 'Portfolio - ' + year;
+
+    </script>
+</body>
+</html>

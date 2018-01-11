@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Roboto+Mono" rel="stylesheet">
+    <nav class="navbar navbar-light bg-faded" style="background-color: #dddddd;">
+        <a class="navbar-brand" href="../">
+            Madeline Johnston
+        </a>
+    </nav>
+
+    <div id="container" class="col-12">
+        <div class="col-lg-10 offset-lg-1">
+            <div id="content" class="animate_bottom">
+
+                <div class="col-lg-8 offset-lg-2" style="text-align: center;">
+                    <h1 class="headline">Project 2a</h1>
+                    <hr width=50%>
+                    <div class="line_break">
+                    </div>
+                    <p class="">
+                        This design project consisted of analysis of the new site at the West end of Plymouth city centre
+                        along with a study trip to Turin, Italy. During the study trip we analysed different areas of Turin
+                        through a theme. Our group chose to analyse Turin through the lense of appropriation of space,
+                        looking at Porta Palazzo market and the appropriation of the square by both vendors and the homeless.
+                        (Images not to scale).
+                    </p>
+                    <div class="line_break">
+                        &nbsp;
+                    </div>
+                </div>
+
+                <!-- row 1 -->
+                <div class="content_row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <img src="../pictures/year2/project2a/quadrat.jpg" style="width:100%; max-height: 750px; object-fit:cover;">
+                        <p class="notes">
+                            Whilst on the study trip we visited Porta Palazzo market. This quadrat study is looking at the way the vendors interact with the ground.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- row 2 -->
+                <div class="content_row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <img src="../pictures/year2/project2a/market stall.jpg" style="width:100%; max-height: 750px; object-fit:cover;">
+                        <p class="notes">
+                            From analysising the Porta Palazzo market, our group designed a market stall that we believe would work well in Turin. Our idea is appropriation of space, so the heights of the canopies and tables can be altered depending on the time of day and the products each vendor is selling. The top image shows the market during the day with each vendor appropriating the stalls. The second image shows the market stalls at night, we noticed after the vendors had packed away their stall homeless people would go to the market to eat the fruits and vegetables left on the ground, therefore the market stalls can also be appropriated by the homeless as somewhere to sleep. (Both models are made in Rhinoceros with Grasshopper).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- row 3 -->
+                <div class="content_row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <img src="../pictures/year2/project2a/plymouth diagram1.jpg" style="width:100%; max-height: 750px; object-fit:cover;">
+                        <p class="notes">
+                            I used Grasshopper to create a model representing the openness of the new site at the West end of Plymouth city centre.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- row 4 -->
+                <div class="content_row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <img src="../pictures/year2/project2a/plymouth diagram2.jpg" style="width:100%; max-height: 750px; object-fit:cover;">
+                        <p class="notes">
+                            The parameters in this model allow me to change the area of space the person is stood in. I made the area smaller to exaggerate the enclosure of what the site could be.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="line_break">
+                    &nbsp;
+                </div>
+
+                <div style="text-align:center">
+                    <a href="../profile">
+                        <p class="notes_lg">
+                            Madeline Johnston
+                        </p>
+                        <p id="portfolio_year" class="notes">
+
+                        </p>
+                    </a>
+                </div>
+
+                <div class="line_break">
+                    &nbsp;
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    let currentTime = new Date();
+    let year = currentTime.getFullYear();
+    document.getElementById('portfolio_year').innerHTML = 'Portfolio - ' + year;
+
+    </script>
+</body>
+</html>
