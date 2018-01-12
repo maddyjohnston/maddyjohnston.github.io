@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%;">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,78 +7,79 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="height: 100%;">
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Roboto+Mono" rel="stylesheet">
-    <nav class="navbar navbar-light bg-faded" style="background-color: #dddddd;">
-        <a class="navbar-brand" href="">
-            Madeline Johnston
-        </a>
-    </nav>
 
-    <div id="container" class="col-12">
-        <div class="col-md-10 offset-md-1">
-            <div id="content" class="animate_bottom">
-
-                <div class="card-deck">
-
-                    <div class="card text-center">
-                        <a href="year1">
-                            <img class="card-img-top" style="width: 100%; height:300px; object-fit:cover;" src="pictures/year1/project6/design perspective.jpg" alt="Card image cap">
-                            <div class="card-block">
-                                <h4 class="card-title">Year 1</h4>
-                                <p class="card-text">The first year of university was learning the fundimentals of architecture.</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="card text-center">
-                        <a href="year2">
-                            <img class="card-img-top" style="width: 100%; height:300px; object-fit:cover;" src="pictures/year2/project2a/quadrat.jpg" alt="Card image cap">
-                            <div class="card-block">
-                                <h4 class="card-title">Year 2</h4>
-                                <p class="card-text">This is my seconds year work that involved lots of computer design.</p>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="line_break">
-                    &nbsp;
-                </div>
-
-                <div style="text-align:center">
-                    <a href="profile">
-                        <p class="notes_lg">
-                            Madeline Johnston
-                        </p>
-                        <p id="portfolio_year" class="notes">
-
-                        </p>
-                    </a>
-                </div>
-
-                <div class="line_break">
-                    &nbsp;
-                </div>
-
-            </div>
+        <div class="front_1">
+            <h1 class="headline vertically_align" style="color:white;">Madeline</h1>
         </div>
-    </div>
+
+        <div class="front_2">
+            <h1 class="headline vertically_align">Johnston</h1>
+        </div>
+
+        <!-- Footer -->
+        <div class="line_break">
+        </div>
+        <div style="text-align:center">
+
+            <div class="line_break">
+                &nbsp;
+            </div>
+
+            <div class="col-lg-2 offset-lg-5 col-md-4 offset-md-4 col-sm-6 offset-sm-3 col-6 offset-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <a href="projects">
+                                <span class="notes_lg">
+                                    [Portfolio]
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="profile">
+                                <span class="notes_lg">
+                                    [Profile]
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="line_break">
+            &nbsp;
+        </div>
+
+        <div id="scroll_prompt" class="footer"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+
+
 
     <script>
 
-    let currentTime = new Date();
-    let year = currentTime.getFullYear();
-    document.getElementById('portfolio_year').innerHTML = 'Portfolio - ' + year;
 
+    $( document ).ready(function() {
+        $('body').hide().fadeIn('slow');
+    });
+
+    let lastScrollTop = 0;
+    $(window).scroll(function(event){
+       let st = $(this).scrollTop();
+       if (st > lastScrollTop){
+           $('#scroll_prompt').fadeOut();
+       }
+       lastScrollTop = st;
+    });
 
     </script>
 </body>
