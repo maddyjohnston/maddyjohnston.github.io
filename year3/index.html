@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
@@ -20,7 +20,7 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-        <a class="navbar-brand text-center" href="/">
+        <a class="navbar-brand text-center" href="/..">
             Madeline Johnston
         </a>
 
@@ -28,64 +28,40 @@
             <div><!--placeholder to evenly space flexbox items and center links--></div>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/projects">Projects</a>
+                    <a class="nav-link" href="../projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/profile">Profile</a>
+                    <a class="nav-link" href="../profile">Profile</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <div id="container" class="col-12">
-        <div class="col-md-10 offset-md-1">
+        <div class="col-lg-8 offset-lg-2">
             <div id="content" class="animate_bottom">
 
                 <div class="row" >
-                    <div class="col-md-4" style="margin-top:2%;">
-                        <div class="card text-center" style="box-shadow: 0px 0px 8px #DDDDDD;">
-                            <a href="year1">
-                                <img class="card-img-top" style="width: 100%; height:300px; object-fit:cover;" src="pictures/year1/tavistock_site/design perspective.jpg" alt="Card image cap">
-                                <div class="card-block">
-                                    <h4 class="card-title">Year 1</h4>
-                                    <p class="card-text">Developing my drawing skills through learning the fundamentals of architecture.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
 
-                    <div class="col-md-4" style="margin-top:2%;">
+                    <div class="col-md-12" style="margin-top:2%;">
                         <div class="card text-center" style="box-shadow: 0px 0px 8px #DDDDDD;">
-                            <a href="year2">
-                                <img class="card-img-top" style="width: 100%; height:300px; object-fit:cover;" src="pictures/year2/fabricate/render_cover.jpg" alt="Card image cap">
+                            <a href="cultural_corridor">
+                                <img class="card-img-top" style="width: 100%; height:300px; object-fit:cover;" src="../pictures/year3/cultural_corridor/section_cover.jpg" alt="Card image cap">
                                 <div class="card-block">
-                                    <h4 class="card-title">Year 2</h4>
-                                    <p class="card-text">The development of using computer programmes in my design work.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4" style="margin-top:2%;">
-                        <div class="card text-center" style="box-shadow: 0px 0px 8px #DDDDDD;">
-                            <a href="year3">
-                                <img class="card-img-top" style="width: 100%; height:300px; object-fit:cover;" src="pictures/year3/cultural_corridor/cover.jpg" alt="Card image cap">
-                                <div class="card-block">
-                                    <h4 class="card-title">Year 3</h4>
-                                    <p class="card-text">Developing skills further and conducting deeper analysis during design.</p>
+                                    <h4 class="card-title">Cultural Corridor</h4>
+                                    <p class="card-text">Giving Back to the Community</p>
                                 </div>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
 
                 <div class="line_break">
                     &nbsp;
                 </div>
 
                 <div style="text-align:center">
-                    <a href="profile">
+                    <a href="../profile">
                         <p class="notes_lg">
                             Madeline Johnston
                         </p>
@@ -108,7 +84,6 @@
     let currentTime = new Date();
     let year = currentTime.getFullYear();
     document.getElementById('portfolio_year').innerHTML = 'Portfolio - ' + year;
-
 
     </script>
 </body>
