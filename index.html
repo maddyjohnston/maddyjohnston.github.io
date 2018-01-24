@@ -18,51 +18,83 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Roboto+Mono" rel="stylesheet">
 
-        <div class="front_1">
-            <h1 class="headline bottom_center_align" style="padding:0; color:white;">Madeline</h1>
+    <nav class="navbar navbar-light navbar-toggleable-md bg-faded justify-content-between text-center" id="nav" style="background-color: #dddddd; display: none">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand text-center" href="/">
+            Madeline Johnston
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <div><!--placeholder to evenly space flexbox items and center links--></div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/profile">Profile</a>
+                </li>
+            </ul>
         </div>
+    </nav>
 
-        <div class="front_2">
-            <h1 class="headline top_center_align" style="padding:0;">Johnston</h1>
-        </div>
+    <div class="front_1">
+        <h1 id="name_1" class="headline bottom_center_align" style="padding:0; color:white;">Madeline</h1>
+    </div>
 
-        <!-- Footer -->
+    <div class="front_2">
+        <h1 id="name_2" class="headline top_center_align" style="padding:0;">Johnston</h1>
+    </div>
 
-        <div class="line_break">
-            &nbsp;
-        </div>
 
-        <div style="text-align:center">
-            <div class="col-12">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-6" style="text-align: right;">
-                            <a href="projects">
-                                <span class="notes_lg">
-                                    [Portfolio]
-                                </span>
-                            </a>
-                        </div>
-                        <div class="col-6" style="text-align: left;">
-                            <a href="profile">
-                                <span class="notes_lg">
-                                    [Profile]
-                                </span>
-                            </a>
-                        </div>
+    <!-- Footer -->
+
+    <div class="line_break">
+        &nbsp;
+    </div>
+
+    <div style="text-align:center">
+        <div class="col-12">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6" style="text-align: right;">
+                        <span class="notes_lg" onclick="transition('projects.html');" style="cursor: pointer;">
+                            [Portfolio]
+                        </span>
+                    </div>
+                    <div class="col-6" style="text-align: left;">
+                        <span class="notes_lg" onclick="transition('profile.html');" style="cursor: pointer;">
+                            [Profile]
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="line_break">
-            &nbsp;
-        </div>
+    <div class="line_break">
+        &nbsp;
+    </div>
 
-        <div id="scroll_prompt" class="footer"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+    <div id="scroll_prompt" class="footer"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
 
     <script>
 
+    function transition(link) {
+
+        $('#name_1').fadeOut('fast');
+
+        $('#name_2').fadeOut('fast', function () {
+            $('.front_1').slideUp('fast', function () {
+                $('.front_2').slideUp('fast', function () {
+                    $('#nav').slideDown('fast', function() {
+                        window.location.href = link;
+                    });
+                });
+            });
+        });
+    }
 
     $( document ).ready(function() {
         $('body').hide().fadeIn('slow');
