@@ -8,11 +8,11 @@ $(document).on('click', '.preview', function (e) {
 function open_modal(src, msg) {
     swal({
         imageUrl: src,
-        width: '60%',
+        customClass: 'col-sm-12 col-md-11 col-xl-10',
         padding: 0,
         showConfirmButton: false,
         showCloseButton: true,
-        html: `<small>${msg}</small>`,
+        html: `<p class="notes">${msg}</p>`,
         imageAlt: msg,
     });
 }

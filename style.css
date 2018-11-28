@@ -207,3 +207,8 @@ a:active {
 .preview:hover {
     box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
 }
+
+.swal2-image {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
