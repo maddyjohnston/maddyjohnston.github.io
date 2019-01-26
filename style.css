@@ -147,7 +147,7 @@ a:active {
 
 .headline {
     font-family: 'Playfair Display', serif;
-    font-size: 14vmin;
+    font-size: calc(3vh + 3vw + 4vmin);
     padding: 4% 0;
 }
 
