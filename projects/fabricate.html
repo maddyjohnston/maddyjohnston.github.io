@@ -58,116 +58,87 @@
         </div>
     </nav>
 
-    <div id="container" class="col-12">
+    <div id="container" class="col-12 animate_bottom">
         <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-            <div id="content" class="animate_bottom">
+            <div id="content">
 
-                <div class="col-md-10 offset-md-1 text-center">
-                    <h1 class="headline pt-4">Fabricate</h1>
-                    <hr width=50%>
-                    <div class="line_break">
-                    </div>
-                    <p class="">
-                        Site analysis of the West end of Plymouth and analysis from our study trip to Turin, Italy begin our group development of a masterplan that rejuvenates the West area of Plymouth city centre.
-                        Our group recognized the need to give back to people who need help, beginning with our design of market stalls in Turin that help the homeless,
-                        which developed into our ‘Sanctuary City’ masterplan that helps integrate migrants into the community.
-                        As a response to the group masterplan I designed a multi-faith centre, to offer a place of prayer and worship to the migrants and the wider community.
+                <div class="col-12 text-center text-lg-left px-5">
+                    <h1 id="heading" class="headline pt-4"></h1>
+                    <p id="description" class="py-3">
                     </p>
-                    <div class="line_break">
-                        &nbsp;
-                    </div>
-                </div>
-
-                <!-- row 1 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/fabricate/quadrat.jpg">
-                        <p class="notes">
-                            From a visit to Porta Palazzo market in Turin, this is a hand drawn quadrat looking at how the vendors interact with the ground.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 2 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/fabricate/market_stall.jpg">
-                        <p class="notes">
-                            The group design of a market stall that has multiple use whether it is daytime or night-time.
-                            The canopies can be raised and lowered to accommodate the vendors during the day and offer a place of rest for the homeless during the night.
-                            I created this model in Rhinoceros using the Grasshopper extension.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 3 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/fabricate/religion_diagrams.jpg">
-                        <p class="notes">
-                            As part of the concept development stage, I created miniature models of each faiths requirements to pray or worship. Having a strong understanding of this was key to this projects success.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 4 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/fabricate/material_models.jpg">
-                        <p class="notes">
-                            Series of models representing materials of my design. The concrete shows the existing materials on site.
-                            The two cardboard models were fabricated on the laser cutter to show the railing system for the partition in
-                            the worship space. A geometric diagrid structure with tiling exterior that builds up the free-form shell of my proposal.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 5 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/fabricate/chunk_model.jpg">
-                        <p class="notes">
-                            A 1:50 solid concrete based chunk model shows the atrium to display the sunlight qualities and shell of the proposed diagrid roof structure.
-                            Created using laser cut cardboard and handmade pyramids to represent the glass pyramids that cover the main gathering space.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 6 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/fabricate/section.jpg">
-                        <p class="notes">
-                            I created this section of my whole proposal in AutoCAD overlaid with atmosphere and materiality in Photoshop.
-                            This drawing portrays the main gathering space of my design, which allows multiple faiths to come together.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="line_break">
-                    &nbsp;
-                </div>
-
-                <div style="text-align:center">
-                    <a href="../profile">
-                        <p class="notes_lg">
-                            Madeline Johnston
-                        </p>
-                        <p id="portfolio_year" class="notes">
-
-                        </p>
-                    </a>
-                </div>
-
-                <div class="line_break">
-                    &nbsp;
                 </div>
 
             </div>
+
+            <div class="text-center py-5">
+                <a href="../profile">
+                    <p class="notes_lg">
+                        Madeline Johnston
+                    </p>
+                    <p id="portfolio_year" class="notes">
+
+                    </p>
+                </a>
+            </div>
+
         </div>
     </div>
 
     <script>
+
+    let itemTemplate = (image, description) => `<div class="content_row">
+                            <div class="row">
+                                <div class="col-12 col-lg-8 p-0 m-0">
+                                    <img class="preview" src="${image}">
+                                </div>
+                                <div class="col-12 col-lg-4 p-4 m-0">
+                                    <p class="notes vertically_align">
+                                        ${description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>`;
+
+    let data = [
+        {
+            'image':'../pictures/year2/fabricate/quadrat.jpg',
+            'description': 'From a visit to Porta Palazzo market in Turin, this is a hand drawn quadrat looking at how the vendors interact with the ground.',
+        },
+        {
+            'image':'../pictures/year2/fabricate/market_stall.jpg',
+            'description': 'The group design of a market stall that has multiple use whether it is daytime or night-time. The canopies can be raised and lowered to accommodate the vendors during the day and offer a place of rest for the homeless during the night. I created this model in Rhinoceros using the Grasshopper extension.',
+        },
+        {
+            'image':'../pictures/year2/fabricate/religion_diagrams.jpg',
+            'description': 'As part of the concept development stage, I created miniature models of each faiths requirements to pray or worship. Having a strong understanding of this was key to this projects success.',
+        },
+        {
+            'image':'../pictures/year2/fabricate/material_models.jpg',
+            'description': 'Series of models representing materials of my design. The concrete shows the existing materials on site. The two cardboard models were fabricated on the laser cutter to show the railing system for the partition in the worship space. A geometric diagrid structure with tiling exterior that builds up the free-form shell of my proposal.',
+        },
+        {
+            'image':'../pictures/year2/fabricate/chunk_model.jpg',
+            'description': 'A 1:50 solid concrete based chunk model shows the atrium to display the sunlight qualities and shell of the proposed diagrid roof structure. Created using laser cut cardboard and handmade pyramids to represent the glass pyramids that cover the main gathering space.',
+        },
+        {
+            'image':'../pictures/year2/fabricate/section.jpg',
+            'description': 'I created this section of my whole proposal in AutoCAD overlaid with atmosphere and materiality in Photoshop. This drawing portrays the main gathering space of my design, which allows multiple faiths to come together.',
+        },
+        {
+            'image':'',
+            'description': '',
+        },
+    ];
+
+    $('#heading').html('Fabricate');
+    $('#description').html(`Site analysis of the West end of Plymouth and analysis from our study trip to Turin, Italy begin our group development of a masterplan that rejuvenates the West area of Plymouth city centre.
+                        Our group recognized the need to give back to people who need help, beginning with our design of market stalls in Turin that help the homeless,
+                        which developed into our ‘Sanctuary City’ masterplan that helps integrate migrants into the community.
+                        As a response to the group masterplan I designed a multi-faith centre, to offer a place of prayer and worship to the migrants and the wider community.`);
+
+    for (let item of data) {
+        $('#content').append(itemTemplate(item.image, item.description))
+    }
 
     let currentTime = new Date();
     let year = currentTime.getFullYear();

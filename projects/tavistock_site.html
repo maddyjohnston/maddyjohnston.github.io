@@ -58,101 +58,80 @@
         </div>
     </nav>
 
-    <div id="container" class="col-12">
+    <div id="container" class="col-12 animate_bottom">
         <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-            <div id="content" class="animate_bottom">
+            <div id="content">
 
-                <div class="col-md-10 offset-md-1 text-center">
-                    <h1 class="headline pt-4">Tavistock</h1>
-                    <hr width=50%>
-                    <div class="line_break">
-                    </div>
-                    <p class="">
-                        Project 6 of first year was the culmination of all we had learnt throughout first year.
-                        The project involved site analysis of the materials that were present within our site in Tavistock, Devon.
-                        As Tavistock is an UNESCO world heritage site I chose to design a museum,
-                        with space on the first floor for an academic researching the area to stay temporarily.
-                        All final work was hand drawn at a variety of scales.
+                <div class="col-12 text-center text-lg-left px-5">
+                    <h1 id="heading" class="headline pt-4"></h1>
+                    <p id="description" class="py-3">
                     </p>
-                    <div class="line_break">
-                        &nbsp;
-                    </div>
-                </div>
-
-                <!-- row 1 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year1/tavistock_site/site perspective.jpg">
-                        <p class="notes">
-                            Site perspective, part of a design studio task exploring different techniques to show the existing site.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 2 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year1/tavistock_site/site section2.jpg">
-                        <p class="notes">
-                            Site section through canal, an interesting feature of the site. The canal was used to transport the ore from mines within Devon and Cornwall.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 3 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year1/tavistock_site/building section1.jpg">
-                        <p class="notes">
-                            Section through skylight feature of proposed design. The skylight brings natural light down to highlight a museum exhibition piece.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 4 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year1/tavistock_site/building section2.jpg">
-                        <p class="notes">
-                            Section through canal with my design. This drawing shows the relationship between the public pathway to the left of the canal and my proposal.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 5 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year1/tavistock_site/model.jpg">
-                        <p class="notes">
-                            Handmade chunk model of my design, showing the skylight feature.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="line_break">
-                    &nbsp;
-                </div>
-
-                <div style="text-align:center">
-                    <a href="../profile">
-                        <p class="notes_lg">
-                            Madeline Johnston
-                        </p>
-                        <p id="portfolio_year" class="notes">
-
-                        </p>
-                    </a>
-                </div>
-
-                <div class="line_break">
-                    &nbsp;
                 </div>
 
             </div>
+
+            <div class="text-center py-5">
+                <a href="../profile">
+                    <p class="notes_lg">
+                        Madeline Johnston
+                    </p>
+                    <p id="portfolio_year" class="notes">
+
+                    </p>
+                </a>
+            </div>
+
         </div>
     </div>
 
     <script>
+
+    let itemTemplate = (image, description) => `<div class="content_row">
+                            <div class="row">
+                                <div class="col-12 col-lg-8 p-0 m-0">
+                                    <img class="preview" src="${image}">
+                                </div>
+                                <div class="col-12 col-lg-4 p-4 m-0">
+                                    <p class="notes vertically_align">
+                                        ${description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>`;
+
+    let data = [
+        {
+            'image':'../pictures/year1/tavistock_site/site perspective.jpg',
+            'description': 'Site perspective, part of a design studio task exploring different techniques to show the existing site.',
+        },
+        {
+            'image':'../pictures/year1/tavistock_site/site section2.jpg',
+            'description': 'Site section through canal, an interesting feature of the site. The canal was used to transport the ore from mines within Devon and Cornwall.',
+        },
+        {
+            'image':'../pictures/year1/tavistock_site/building section1.jpg',
+            'description': 'Section through skylight feature of proposed design. The skylight brings natural light down to highlight a museum exhibition piece.',
+        },
+        {
+            'image':'../pictures/year1/tavistock_site/site section1.jpg',
+            'description': 'Another site section, demonstrating the materiality of the historic stone buildings that feature all around the UNESCO World Heritage Site of Tavistock.',
+        },
+        {
+            'image':'../pictures/year1/tavistock_site/model.jpg',
+            'description': 'Handmade chunk model of my design, showing the skylight feature.',
+        },
+    ];
+
+    $('#heading').html('Tavistock');
+    $('#description').html(`Project 6 of first year was the culmination of all we had learnt throughout first year.
+                        The project involved site analysis of the materials that were present within our site in Tavistock, Devon.
+                        As Tavistock is an UNESCO world heritage site I chose to design a museum,
+                        with space on the first floor for an academic researching the area to stay temporarily.
+                        All final work was hand drawn at a variety of scales.`);
+
+    for (let item of data) {
+        $('#content').append(itemTemplate(item.image, item.description))
+    }
 
     let currentTime = new Date();
     let year = currentTime.getFullYear();

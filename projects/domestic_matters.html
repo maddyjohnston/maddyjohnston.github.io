@@ -58,123 +58,88 @@
         </div>
     </nav>
 
-    <div id="container" class="col-12">
+    <div id="container" class="col-12 animate_bottom">
         <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-            <div id="content" class="animate_bottom">
+            <div id="content">
 
-                <div class="col-md-10 offset-md-1 text-center">
-                    <h1 class="headline pt-4">Domestic Matters</h1>
-                    <hr width=50%>
-                    <div class="line_break">
-                    </div>
-                    <p class="">
-                        This project begins with research into the West Hoe site and precedent of Barbican Estate, London.
-                        From initial research we designed a single person dwelling, my design breaks the boundary that existed between the residential and leisure areas of West Hoe, Plymouth.
-                        Developing from this we worked as a group to design a masterplan for the Quality Inn site.
-                        The masterplan included a 4* hotel, over 80 residential units and a series of cultural buildings to draw the public in.
-                        I chose to design an art gallery and studio as one of the cultural buildings, connected to the swimming pool and café that was part of the 4* hotel.
+                <div class="col-12 text-center text-lg-left px-5">
+                    <h1 id="heading" class="headline pt-4"></h1>
+                    <p id="description" class="py-3">
                     </p>
-                    <div class="line_break">
-                        &nbsp;
-                    </div>
                 </div>
-
-                <!-- row 1 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/domestic_matters/barbican_model.jpg">
-                        <p class="notes">
-                            A key model we produced to represent the research we conducted on the Barbican Estate, London. The red thread shows the harsh boundary around the perimeter of the estate.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 2 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/domestic_matters/sections.jpg">
-                        <p class="notes">
-                            A section through my proposed dwellings, a series of raised dwellings provide a gateway to the park area of West Hoe.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 3 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/domestic_matters/model.jpg">
-                        <p class="notes">
-                            A steel space frame holds up four shipping containers to create the structure of my building. To understand how a space frame works I handmade this 1:50 model of my design.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 4 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/domestic_matters/group_work.jpg">
-                        <p class="notes">
-                            The masterplan drawing overlaid onto a map, with a digital model of the buildings to understand massing of the masterplan.
-                            We created a laser cut physical model of the ground to place our propositions onto because this best showed the steps.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 5 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/domestic_matters/3d_model.jpg">
-                        <p class="notes">
-                            I further developed my design using 123D Design to visualise the intricate structure of my proposal.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 6 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/domestic_matters/section.jpg">
-                        <p class="notes">
-                            This section cuts through the center of my proposal, showing pieces of each programme I designed. Created in AutoCAD and overlaid with atmosphere and textures in Photoshop.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 7 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year2/domestic_matters/key_image_1.jpg">
-                        <p class="notes">
-                            Perspective taken from my digital model, and materiality was added in Photoshop.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="line_break">
-                    &nbsp;
-                </div>
-
-                <div style="text-align:center">
-                    <a href="../profile">
-                        <p class="notes_lg">
-                            Madeline Johnston
-                        </p>
-                        <p id="portfolio_year" class="notes">
-
-                        </p>
-                    </a>
-                </div>
-
-                <div class="line_break">
-                    &nbsp;
-                </div>
-
 
             </div>
+
+            <div class="text-center py-5">
+                <a href="../profile">
+                    <p class="notes_lg">
+                        Madeline Johnston
+                    </p>
+                    <p id="portfolio_year" class="notes">
+
+                    </p>
+                </a>
+            </div>
+
         </div>
     </div>
 
     <script>
+
+    let itemTemplate = (image, description) => `<div class="content_row">
+                            <div class="row">
+                                <div class="col-12 col-lg-8 p-0 m-0">
+                                    <img class="preview" src="${image}">
+                                </div>
+                                <div class="col-12 col-lg-4 p-4 m-0">
+                                    <p class="notes vertically_align">
+                                        ${description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>`;
+
+    let data = [
+        {
+            'image':'../pictures/year2/domestic_matters/barbican_model.jpg',
+            'description': 'A key model we produced to represent the research we conducted on the Barbican Estate, London. The red thread shows the harsh boundary around the perimeter of the estate.',
+        },
+        {
+            'image':'../pictures/year2/domestic_matters/sections.jpg',
+            'description': 'A section through my proposed dwellings, a series of raised dwellings provide a gateway to the park area of West Hoe.',
+        },
+        {
+            'image':'../pictures/year2/domestic_matters/model.jpg',
+            'description': 'A steel space frame holds up four shipping containers to create the structure of my building. To understand how a space frame works I handmade this 1:50 model of my design.',
+        },
+        {
+            'image':'../pictures/year2/domestic_matters/group_work.jpg',
+            'description': 'The masterplan drawing overlaid onto a map, with a digital model of the buildings to understand massing of the masterplan. We created a laser cut physical model of the ground to place our propositions onto because this best showed the steps.',
+        },
+        {
+            'image':'../pictures/year2/domestic_matters/3d_model.jpg',
+            'description': 'I further developed my design using 123D Design to visualise the intricate structure of my proposal.',
+        },
+        {
+            'image':'../pictures/year2/domestic_matters/section.jpg',
+            'description': 'This section cuts through the center of my proposal, showing pieces of each programme I designed. Created in AutoCAD and overlaid with atmosphere and textures in Photoshop.',
+        },
+        {
+            'image':'../pictures/year2/domestic_matters/key_image_1.jpg',
+            'description': 'Perspective taken from my digital model, and materiality was added in Photoshop.',
+        },
+    ];
+
+    $('#heading').html('Domestic Matters');
+    $('#description').html(`This project begins with research into the West Hoe site and precedent of Barbican Estate, London.
+                        From initial research we designed a single person dwelling, my design breaks the boundary that existed between the residential and leisure areas of West Hoe, Plymouth.
+                        Developing from this we worked as a group to design a masterplan for the Quality Inn site.
+                        The masterplan included a 4* hotel, over 80 residential units and a series of cultural buildings to draw the public in.
+                        I chose to design an art gallery and studio as one of the cultural buildings, connected to the swimming pool and café that was part of the 4* hotel.`);
+
+    for (let item of data) {
+        $('#content').append(itemTemplate(item.image, item.description))
+    }
 
     let currentTime = new Date();
     let year = currentTime.getFullYear();

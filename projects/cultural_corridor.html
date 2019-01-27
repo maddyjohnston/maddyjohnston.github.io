@@ -58,126 +58,87 @@
         </div>
     </nav>
 
-    <div id="container" class="col-12">
+    <div id="container" class="col-12 animate_bottom">
         <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-            <div id="content" class="animate_bottom">
+            <div id="content">
 
-                <div class="col-md-10 offset-md-1 text-center">
-                    <h1 class="headline pt-4">Cultural Corridor</h1>
-                    <hr width=50%>
-                    <div class="line_break">
-                    </div>
-                    <p class="">
-                        Plymouth County Council have plans to create a cultural corridor from the University campus to the historic waterfront at the Barbican.
-                        We responded to these plans, designing an urban framework for our own cultural corridor, and then neighbourhood masterplans in smaller groups.
-                        Our neighbourhood masterplan has the theme of giving back to the community because the monoculture of residential acts as a barrier between the high levels of activity which are the city centre and the Barbican.
-                        My design of a book café gives back to the community by giving them the skills to gain employment, skills that are severely lacking on our site.
+                <div class="col-12 text-center text-lg-left px-5">
+                    <h1 id="heading" class="headline pt-4"></h1>
+                    <p id="description" class="py-3">
                     </p>
-                    <div class="line_break">
-                        &nbsp;
-                    </div>
-                </div>
-
-                <!-- row 1 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year3/cultural_corridor/example_group_work1.jpg">
-                        <p class="notes">
-                            Exploring the physical conditions of our site, this gives us a base layer of information we can begin our interventions from.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 2 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year3/cultural_corridor/example_group_work2.jpg">
-                        <p class="notes">
-                            Deeper analysis looking into the people who live on our site. This involved conducting a survey of the residents to find out where they would like to see improvement.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 3 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year3/cultural_corridor/urban_framework.jpg">
-                        <p class="notes">
-                            Working together as a year, we identified strengths and weaknesses along the proposed cultural corridor. Following this with the development of themes for each neighbourhood masterplan.
-                            To help understand the physical cultural corridor, we built a 1:200 model of Plymouth from the University campus down to the Sutton Harbour entrance including the aquarium on the East side.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 4 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year3/cultural_corridor/masterplan.jpg">
-                        <p class="notes">
-                            Our masterplan is about giving back to the community, whilst activating an area that was plagued by crime and anti-social behavior.
-                            We reactivate public ground within our site to set up interactions between residents and the public, something that did not occur beforehand.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 5 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year3/cultural_corridor/floor_plans.jpg">
-                        <p class="notes">
-                            The book café has two key spaces within the building, these are the public café and the learning space which is located on a mezzanine first floor opening to an outdoor reading space to the North of the building.
-                            The learning space gives people the skills they need to become employable, for example reading and writing.
-
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 6 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year3/cultural_corridor/short_section.jpg">
-                        <p class="notes">
-                            Part digital - part hand drawn section demonstrating the visual connection between the café and the learning space.
-                            The interaction between the two activities creates a welcoming atmosphere, designed to make the task of learning to read or write less daunting.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- row 7 -->
-                <div class="content_row">
-                    <div class="col-12 p-0 m-0">
-                        <img class="preview" src="../pictures/year3/cultural_corridor/exterior_perspective.jpg">
-                        <p class="notes">
-                            Hand-drawn perspective of the book café from the centre of our masterplan.
-                            Showing the peaceful reading spaces that are just beyond the centre of activity in our site.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="line_break">
-                    &nbsp;
-                </div>
-
-                <div style="text-align:center">
-                    <a href="../profile">
-                        <p class="notes_lg">
-                            Madeline Johnston
-                        </p>
-                        <p id="portfolio_year" class="notes">
-
-                        </p>
-                    </a>
-                </div>
-
-                <div class="line_break">
-                    &nbsp;
                 </div>
 
             </div>
+
+            <div class="text-center py-5">
+                <a href="../profile">
+                    <p class="notes_lg">
+                        Madeline Johnston
+                    </p>
+                    <p id="portfolio_year" class="notes">
+
+                    </p>
+                </a>
+            </div>
+
         </div>
     </div>
 
     <script>
+
+    let itemTemplate = (image, description) => `<div class="content_row">
+                            <div class="row">
+                                <div class="col-12 col-lg-8 p-0 m-0">
+                                    <img class="preview" src="${image}">
+                                </div>
+                                <div class="col-12 col-lg-4 p-4 m-0">
+                                    <p class="notes vertically_align">
+                                        ${description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>`;
+
+    let data = [
+        {
+            'image':'../pictures/year3/cultural_corridor/example_group_work1.jpg',
+            'description': 'Exploring the physical conditions of our site, this gives us a base layer of information we can begin our interventions from.',
+        },
+        {
+            'image':'../pictures/year3/cultural_corridor/example_group_work2.jpg',
+            'description': 'Deeper analysis looking into the people who live on our site. This involved conducting a survey of the residents to find out where they would like to see improvement.',
+        },
+        {
+            'image':'../pictures/year3/cultural_corridor/urban_framework.jpg',
+            'description': 'Working together as a year, we identified strengths and weaknesses along the proposed cultural corridor. Following this with the development of themes for each neighbourhood masterplan. To help understand the physical cultural corridor, we built a 1:200 model of Plymouth from the University campus down to the Sutton Harbour entrance including the aquarium on the East side.',
+        },
+        {
+            'image':'../pictures/year3/cultural_corridor/masterplan.jpg',
+            'description': 'Our masterplan is about giving back to the community, whilst activating an area that was plagued by crime and anti-social behavior. We reactivate public ground within our site to set up interactions between residents and the public, something that did not occur beforehand.',
+        },
+        {
+            'image':'../pictures/year3/cultural_corridor/floor_plans.jpg',
+            'description': 'The book café has two key spaces within the building, these are the public café and the learning space which is located on a mezzanine first floor opening to an outdoor reading space to the North of the building. The learning space gives people the skills they need to become employable, for example reading and writing.',
+        },
+        {
+            'image':'../pictures/year3/cultural_corridor/short_section.jpg',
+            'description': 'Part digital - part hand drawn section demonstrating the visual connection between the café and the learning space. The interaction between the two activities creates a welcoming atmosphere, designed to make the task of learning to read or write less daunting.',
+        },
+        {
+            'image':'../pictures/year3/cultural_corridor/exterior_perspective.jpg',
+            'description': 'Hand-drawn perspective of the book café from the centre of our masterplan. Showing the peaceful reading spaces that are just beyond the centre of activity in our site.',
+        },
+    ];
+
+    $('#heading').html('Cultural Corridor');
+    $('#description').html(`Plymouth County Council have plans to create a cultural corridor from the University campus to the historic waterfront at the Barbican.
+                        We responded to these plans, designing an urban framework for our own cultural corridor, and then neighbourhood masterplans in smaller groups.
+                        Our neighbourhood masterplan has the theme of giving back to the community because the monoculture of residential acts as a barrier between the high levels of activity which are the city centre and the Barbican.
+                        My design of a book café gives back to the community by giving them the skills to gain employment, skills that are severely lacking on our site.`);
+
+    for (let item of data) {
+        $('#content').append(itemTemplate(item.image, item.description))
+    }
 
     let currentTime = new Date();
     let year = currentTime.getFullYear();
