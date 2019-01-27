@@ -1,6 +1,6 @@
 body {
     /* background-color: #f1f1f1; */
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     /* font-size: 18px; */
     font-size: 100%;
 }
@@ -22,9 +22,18 @@ h4 {
 }
 
 h5 {
-    font-size: calc(1.5vh + 1.5vmin);
+    font-size: calc(18px + 1vmin);
+    font-weight: 200;
 }
 
+p {
+    font-size: calc(12px + 0.5vmin);
+    font-weight: 200;
+}
+
+.grey-text {
+    color: #999;
+}
 
 .navbar-light {
     padding-right: 7%;
@@ -39,16 +48,16 @@ h5 {
 
 
 .card {
+    position: relative;
     border-radius: 0px;
     border: solid 0px #fff;
     box-shadow : 0px 0px 15px 5px rgba(0,0,0,0.03);
     background-color: #fff;
     transition: all 0.2s ease-in-out;
     height:100%;
-    
+    cursor: pointer;
     word-wrap: break-word;
     overflow-wrap: break-word;
-
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
@@ -56,6 +65,9 @@ h5 {
 
 .card:hover {
     box-shadow : 0px 0px 15px 5px rgba(0,0,0,0.07);
+    -moz-transform: translateY(-5px);
+    transform: translateY(-5px);
+
 }
 
 .cover-image {
@@ -78,8 +90,10 @@ h5 {
 }
 
 .navbar-nav .nav-item{
-  float: inherit;
-  display: inline-block;
+    float: inherit;
+    display: inline-block;
+    padding: 0px 10px;
+
 }
 
 .profile-image {
@@ -91,10 +105,6 @@ h5 {
 
 .profile-image:hover {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
-}
-
-p {
-    font-size: 16px;
 }
 
 a {
@@ -184,8 +194,12 @@ a:active {
 }
 
 .headline {
-    font-family: 'Playfair Display', serif;
     font-size: calc(2vh + 2vw + 3vmin);
+}
+
+.landing-text {
+    font-family: 'Playfair Display', serif;
+    font-size: calc(3vh + 3vw + 3vmin);
 }
 
 .notes_lg {
