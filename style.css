@@ -1,14 +1,36 @@
 body {
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     font-family: 'Lato', sans-serif;
     /* font-size: 18px; */
     font-size: 100%;
 }
 
+h1 {
+
+}
+
+h2 {
+    
+}
+
+h3 {
+    
+}
+
+h4 {
+    
+}
+
+h5 {
+    font-size: calc(1.5vh + 1.5vmin);
+}
+
+
 .navbar-light {
     padding-right: 7%;
     padding-left: 7%;
     font-size: 120%;
+    background-color: #fff !important;
 }
 
 .navbar-toggler.navbar-toggler-right {
@@ -17,19 +39,35 @@ body {
 
 
 .card {
-    border-radius: 4px;
-    border: solid 4px white;
+    border-radius: 0px;
+    border: solid 0px #fff;
+    box-shadow : 0px 0px 15px 5px rgba(0,0,0,0.03);
+    background-color: #fff;
     transition: all 0.2s ease-in-out;
+    height:100%;
+    
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 }
 
 .card:hover {
-    box-shadow : 0px 0px 15px 5px rgba(0,0,0,0.05);
+    box-shadow : 0px 0px 15px 5px rgba(0,0,0,0.07);
 }
 
-.card-img-top {
-    border-radius: 3px 3px 0px 0px;
+.cover-image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 300px;
+    border-radius: 0px;
     border: 0px;
+    transition: all 0.4s ease-in-out;
 }
+
 
 .card-title {
     font-size: 30px;
@@ -53,10 +91,6 @@ body {
 
 .profile-image:hover {
     box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
-}
-
-#container {
-    margin-top: 3%;
 }
 
 p {
@@ -152,7 +186,6 @@ a:active {
 .headline {
     font-family: 'Playfair Display', serif;
     font-size: calc(3vh + 3vw + 4vmin);
-    padding: 4% 0;
 }
 
 .notes_lg {
@@ -215,13 +248,4 @@ a:active {
 .swal2-image {
     margin-top: 5px !important;
     margin-bottom: 5px !important;
-}
-
-.cover-image {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 200px;
-    border-radius: 4px;
-    transition: all 0.4s ease-in-out;
 }
