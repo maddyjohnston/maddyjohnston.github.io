@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Madeline - Barbican Estate</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../pictures/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../pictures/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../pictures/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../pictures/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../pictures/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../pictures/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../pictures/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../pictures/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../pictures/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../pictures/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../pictures/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../pictures/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../pictures/icons/favicon-16x16.png">
+    <link rel="manifest" href="../pictures/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#EDEDED">
+    <meta name="msapplication-TileImage" content="../pictures/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#EDEDED">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert2@7.9.2/dist/sweetalert2.all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>
+    <script src="../script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Roboto+Mono" rel="stylesheet">
+    <nav class="navbar sticky-top navbar-light navbar-toggleable-md bg-faded justify-content-between text-center" style="background-color: #dddddd;">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <a class="navbar-brand text-center" href="/..">
+            Madeline Johnston
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <div><!--placeholder to evenly space flexbox items and center links--></div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../profile">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="container" class="col-12 animate_bottom">
+        <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+            <div id="content">
+
+                <div class="col-12 text-center text-lg-left px-5">
+                    <h1 id="heading" class="headline pt-4">Barbican Estate</h1>
+                    <p class="my-3">Public Space and Surveillance</p>
+                </div>
+                
+                <div id="pdf"></div>
+
+            </div>
+
+            <div class="text-center py-5">
+                <a href="../profile">
+                    <p class="notes_lg">
+                        Madeline Johnston
+                    </p>
+                    <p id="portfolio_year" class="notes">
+
+                    </p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+    if(PDFObject.supportsPDFs){
+        PDFObject.embed('../documents/year_2/Barbican Estate.pdf', "#pdf");
+    } else {
+        document.getElementById('pdf').innerHTML ='<div class="text-center my-5"><span><i>Sorry, your browser does not support this PDF viewer.</i></span></div>';
+    }
+    
+    let currentTime = new Date();
+    let year = currentTime.getFullYear();
+    document.getElementById('portfolio_year').innerHTML = 'Portfolio - ' + year;
+
+    </script>
+</body>
+</html>
