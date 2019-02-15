@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Madeline - Tavistock, Devon</title>
+    <title>Madeline - Brinsbury Fields</title>
     <link rel="apple-touch-icon" sizes="57x57" href="../pictures/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../pictures/icons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../pictures/icons/apple-icon-72x72.png">
@@ -101,33 +101,28 @@
 
     let data = [
         {
-            'image':'../pictures/year1/tavistock_site/site perspective.jpg',
-            'description': 'Site perspective, part of a design studio task exploring different techniques to show the existing site.',
+            'image':'../pictures/hnw/brinsbury_fields/site_elevations.jpg',
+            'description': 'My tasks for this project included taking the revised masterplan drawing and creating site sections to find out how the proposed buildings will be configured with the shallow gradient of the site to minimise cut and fill works, whilst trying to blend the buildings in with the landscape.',
         },
         {
-            'image':'../pictures/year1/tavistock_site/site section2.jpg',
-            'description': 'Site section through canal, an interesting feature of the site. The canal was used to transport the ore from mines within Devon and Cornwall.',
+            'image': '../pictures/hnw/brinsbury_fields/prestige_plan.jpg',
+            'description': 'Focusing in on the largest building; ‘Prestige Used Cars’ which consisted of car storage and showroom, with the necessary supporting facilities, my task was to maximise the amount of car storage whilst thinking of access from other spaces and buildings in the masterplan and the surrounding landscape.',
         },
         {
-            'image':'../pictures/year1/tavistock_site/building section1.jpg',
-            'description': 'Section through skylight feature of proposed design. The skylight brings natural light down to highlight a museum exhibition piece.',
+            'image': '../pictures/hnw/brinsbury_fields/prestige_sketch.jpg',
+            'description': 'This led to sketch elevations of the building, looking at styling the building similar to other showrooms on the masterplan whilst maintaining a sense of individuality. I produced these sketches to present to the Client for approval.',
         },
         {
-            'image':'../pictures/year1/tavistock_site/site section1.jpg',
-            'description': 'Another site section, demonstrating the materiality of the historic stone buildings that feature all around the UNESCO World Heritage Site of Tavistock.',
-        },
-        {
-            'image':'../pictures/year1/tavistock_site/model.jpg',
-            'description': 'Handmade chunk model of my design, showing the skylight feature.',
+            'image': '../pictures/hnw/brinsbury_fields/prestige_elevations.jpg',
+            'description': 'Further discussions with the Client and design development led to the creation of these Elevations drawn in CAD with materials and landscaping added in Photoshop. The building was designed to be surrounded by bunding created from the cut of the ground that would be taken out from the construction of this proposal. The building would also act as a visual screen from areas outside of the site, minimising the impact of the building on the landscape.',
         },
     ];
 
-    $('#heading').html('Tavistock');
-    $('#description').html(`This first year project was a demonstration of architectural understanding and methods 
-    I had learnt throughout the beginning of my degree. The project involved analysis of the materials that were 
-    present within our site in Tavistock, Devon. As Tavistock is an UNESCO world heritage site I chose to design a 
-    museum, with space on the first floor for an academic researching the area to stay temporarily. All final work 
-    was hand drawn at a variety of scales.`);
+    $('#heading').html('Brinsbury Fields');
+    $('#description').html(`HNW Architects Ltd. Project: Brinsbury Fields is a 14 acre masterplanning and detailed 
+    design project for a site near Pulborough, West Sussex. Currently at Stage 3, this project has received planning 
+    approval for a previous masterplan, however the masterplan has since been updated due to client wishes for 
+    different buildings to be included in the masterplan, including a ‘Prestige Used Car Building’.`);
 
     for (let item of data) {
         $('#content').append(itemTemplate(item.image, item.description))

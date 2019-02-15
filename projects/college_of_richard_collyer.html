@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Madeline - Tavistock, Devon</title>
+    <title>Madeline - The College of Richard Collyer</title>
     <link rel="apple-touch-icon" sizes="57x57" href="../pictures/icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../pictures/icons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../pictures/icons/apple-icon-72x72.png">
@@ -101,33 +101,25 @@
 
     let data = [
         {
-            'image':'../pictures/year1/tavistock_site/site perspective.jpg',
-            'description': 'Site perspective, part of a design studio task exploring different techniques to show the existing site.',
+            'image':'../pictures/hnw/college_of_richard_collyer/CRC-masterplan sketch.jpg',
+            'description': 'After carrying out site analysis of the campus we created sketch masterplans of all 8-phases. There were a lot of iterations before this version, especially when we received the topographical survey including underground services and discovered a large surface water drainage pipe cutting through where we had planned to situate the new build sports hall.',
         },
         {
-            'image':'../pictures/year1/tavistock_site/site section2.jpg',
-            'description': 'Site section through canal, an interesting feature of the site. The canal was used to transport the ore from mines within Devon and Cornwall.',
+            'image':'../pictures/hnw/college_of_richard_collyer/CRC-masterplan model.jpg',
+            'description': 'I created this overview image of the masterplan using a SketchUp model so that the proposed phases could be understood in relation to the existing college campus (shown in white) and the surrounding residential area.',
         },
         {
-            'image':'../pictures/year1/tavistock_site/building section1.jpg',
-            'description': 'Section through skylight feature of proposed design. The skylight brings natural light down to highlight a museum exhibition piece.',
+            'image':'../pictures/hnw/college_of_richard_collyer/CRC-sketch plan.jpg',
+            'description': 'For an initial pre-application advice submission we created high-level sketch designs of our proposed alternative to the previously approved scheme. There is a large focus on how our proposal interacts with the courtyard between the two blocks and how we solve the issue of proximity to the residential neighbours and large trees outside of our boundary that have Tree Protection Orders.',
         },
         {
-            'image':'../pictures/year1/tavistock_site/site section1.jpg',
-            'description': 'Another site section, demonstrating the materiality of the historic stone buildings that feature all around the UNESCO World Heritage Site of Tavistock.',
-        },
-        {
-            'image':'../pictures/year1/tavistock_site/model.jpg',
-            'description': 'Handmade chunk model of my design, showing the skylight feature.',
+            'image':'../pictures/hnw/college_of_richard_collyer/CRC-sketch perspective.jpg',
+            'description': 'As initial design for the facade to the courtyard we looked at how we could create a relationship between the existing wing and our proposal. The idea for this was through materials, using similar brick and dark aluminium framed windows.',
         },
     ];
 
-    $('#heading').html('Tavistock');
-    $('#description').html(`This first year project was a demonstration of architectural understanding and methods 
-    I had learnt throughout the beginning of my degree. The project involved analysis of the materials that were 
-    present within our site in Tavistock, Devon. As Tavistock is an UNESCO world heritage site I chose to design a 
-    museum, with space on the first floor for an academic researching the area to stay temporarily. All final work 
-    was hand drawn at a variety of scales.`);
+    $('#heading').html('The College of Richard Collyer');
+    $('#description').html(`HNW Architects Ltd. Project: The College of Richard Collyer commissioned HNW to create an 8-phase long-term masterplan for the site, increasing their teaching accommodation and providing the college with updated facilities. This project involved meeting with the Client at the College and with the Board of Governors to discuss the masterplan and receive their feedback on our designs. Currently at Stage 3, we have taken phases 1b and 3 and are translating these high-level proposals into full planning applications.`);
 
     for (let item of data) {
         $('#content').append(itemTemplate(item.image, item.description))
