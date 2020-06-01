@@ -35,6 +35,12 @@ p {
     color: #999;
 }
 
+.small-date-text {
+    color: black;
+    font-size: 12px;
+    text-align: left;
+}
+
 .navbar-light {
     padding-right: 7%;
     padding-left: 7%;
@@ -86,7 +92,7 @@ p {
 }
 
 .nav{
-  text-align: center;
+    text-align: center;
 }
 
 .navbar-nav .nav-item{

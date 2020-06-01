@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Madeline - Brinsbury Fields</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../pictures/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../pictures/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../pictures/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../pictures/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../pictures/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../pictures/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../pictures/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../pictures/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../pictures/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../pictures/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../pictures/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../pictures/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../pictures/icons/favicon-16x16.png">
+    <link rel="manifest" href="../pictures/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#EDEDED">
+    <meta name="msapplication-TileImage" content="../pictures/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#EDEDED">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert2@7.9.2/dist/sweetalert2.all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script src="../script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Roboto+Mono" rel="stylesheet">
+    <nav class="navbar sticky-top navbar-light navbar-toggleable-md bg-faded justify-content-between text-center" style="background-color: #dddddd;">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <a class="navbar-brand text-center" href="/..">
+            Madeline Johnston
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <div><!--placeholder to evenly space flexbox items and center links--></div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../profile">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="container" class="col-12 animate_bottom">
+        <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+            <div id="content">
+
+                <div class="col-12 text-center text-lg-left px-5">
+                    <h1 id="heading" class="headline pt-4"></h1>
+                    <p id="description" class="py-3">
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="text-center py-5">
+                <a href="../profile">
+                    <p class="notes_lg">
+                        Madeline Johnston
+                    </p>
+                    <p id="portfolio_year" class="notes">
+
+                    </p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+    let itemTemplate = (image, description) => `<div class="content_row">
+                            <div class="row">
+                                <div class="col-12 col-lg-8 p-0 m-0">
+                                    <img class="preview" src="${image}">
+                                </div>
+                                <div class="col-12 col-lg-4 p-4 m-0">
+                                    <p class="notes vertically_align">
+                                        ${description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>`;
+
+    let data = [
+        {
+            'image':'../pictures/march/year1/dsa/1_Artefacts.jpg',
+            'description': "Using the theme of decay, my analysis of the River Frome focuses on people's attitude towards the river and its forces on the objects. Due to the separation in our everyday experience of the river people have less respect for the tributary and treat the space as a dumping ground for unwanted items. The pictured objects are all man-made objects that displayed decay due to the forces of the Frome. The power of the river on the discarded objects is shown through the eroded topography of each artefact portrayed through the contours extracted from the digital models of the artefacts created with photogrammetry.",
+        },
+        {
+            'image':'../pictures/march/year1/dsa/2_Group Mapping.jpg',
+            'description': "Following the individual analysis of the River Frome as an archipelago, we curated the information to form the group mapping. The objective of the mapping is to portray site information that would not otherwise be included in conventional architectural drawings. The contours of my found objects are scaled up and curated to represent the decaying interaction between people and the river. The temporality of decay as an action is encapsulated in the snapshot of the objects as they were when discovered on site.",
+        },
+        {
+            'image':'../pictures/march/year1/dsa/3_Installation.jpg',
+            'description': "Translating the mapping into a three-dimensional installation created opportunities to explore interactions between the layered information and generate new forms for the development of proposals within new-found locals of the archipelago. The M32 was more of a divide than the River Frome and therefore we made the motorway the axis of the installation. To emphasise the motorways effect on the area we manipulated the mapping to make the motorway straight - represented with the steel channel.",
+        },
+        {
+            'image':'../pictures/march/year1/dsa/4_Project Diagrams.jpg',
+            'description': "Bristol was ranked as the leading city in the UK Smart Cities Index in 2017, however ‘smart city’ programmes don’t always take into consideration the local communities needs. The Bristol Approach challenges this by bringing communities, resources and technologies together to make positive change within the city. Building on this, the premise for this proposal is to gather people and information, and disperse data visualisations, skills and knowledge to promote positive change in St Jude's, Bristol.",
+        },
+        {
+            'image':'../pictures/march/year1/dsa/5_GF Plan.jpg',
+            'description': "The ground floor is arranged into 3 key areas, the social kitchen and café, the learning environment and the atrium which is the overlap between the two. Labelled spaces are: 1-Atrium, 2-Kitchen, 3-Café, 4-Group Workshop, 5-Classrooms, 6-Office, 7-Storage, 8-WC's.",
+        },
+        {
+            'image':'../pictures/march/year1/dsa/6_FF Plan.jpg',
+            'description': "The first floor is designed to be more open and public, both in programme and construction. A Pratt Truss structure evenly distributes loads across the floor structure. This allows a large cantilever over the external social space below, creating shelter when the weather is poor. Key spaces: 1-Atrium, 2-Exhibition, 3-Data Processing, 4-WC.",
+        },
+        {
+            'image':'../pictures/march/year1/dsa/7_Renders.jpg',
+            'description': "The key feature of the building is the participatory visual projections that allow people to control light displays by sending a message via social media. During the day this visualisation of data can be seen in the lights that wrap around the lift shaft in the atrium. In contrast, at night the projections will be through LED lights in the polycarbonate wall panels on the first floor.",
+        },
+        {
+            'image':'../pictures/march/year1/dsa/8_Tech Details.jpg',
+            'description': "The design of the ground floor is grounded in the landscape, using heavy materials emphasises the linearity of the plan and encourages movement along the line of the directional walls. These walls are made of cast in-situ concrete sandwiched around insulation, the formwork will be timber planks to create horizontal lines in the finish surface. To Contrast the ground floor construction the steel pratt truss structure will be left visible coated with intumescent paint to ensure fire resistance.",
+        },
+        {
+            'image':'../pictures/march/year1/dsa/9_Flood Drawings.jpg',
+            'description': "Due to sea levels rising, the River Frome is set to flood St Jude's in high tides by the year 2115. Therefore a key component to the riverside design was the buildings capability for dealing with flood waters. To reduce the risk of flooding on the site and weaken the flow of the river, gabion walls will be introduced along the river edge. Whilst permeable paving will allow surface water runoff and flood water to penetrate to the earth underneath.",
+        },
+    ];
+
+    $('#heading').html('Sensing Change');
+    $('#description').html(`This project focuses around Bristol waterways as a connecting body rather than dividing lines, through the understanding of archipelagos. The body of water that connects this project to the city of Bristol is the River Frome, a tributary to the River Avon which has been subject to many man-made interventions culverting the route of the river and passing it through tunnels underneath the city centre to suit our needs as the industry of the city has developed. The project follows an alternative route through site analysis to designing the building, with a focus on sociological connections within urban fragmentations along the River Frome. Site Analysis is first recorded through a mapping created as a group of four students and then translated into a group instlalation, from which my proposal developed.`);
+
+    for (let item of data) {
+        $('#content').append(itemTemplate(item.image, item.description))
+    }
+
+    let currentTime = new Date();
+    let year = currentTime.getFullYear();
+    document.getElementById('portfolio_year').innerHTML = 'Portfolio - ' + year;
+
+    </script>
+</body>
+</html>
