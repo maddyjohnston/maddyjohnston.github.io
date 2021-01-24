@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Madeline - Green Korail</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../pictures/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../pictures/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../pictures/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../pictures/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../pictures/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../pictures/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../pictures/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../pictures/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../pictures/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../pictures/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../pictures/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../pictures/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../pictures/icons/favicon-16x16.png">
+    <link rel="manifest" href="../pictures/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#EDEDED">
+    <meta name="msapplication-TileImage" content="../pictures/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#EDEDED">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert2@7.9.2/dist/sweetalert2.all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script src="../script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display|Roboto+Mono" rel="stylesheet">
+    <nav class="navbar sticky-top navbar-light navbar-toggleable-md bg-faded justify-content-between text-center" style="background-color: #dddddd;">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <a class="navbar-brand text-center" href="/..">
+            Madeline Johnston
+        </a>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <div><!--placeholder to evenly space flexbox items and center links--></div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../profile">Profile</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="container" class="col-12 animate_bottom">
+        <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+            <div id="content">
+
+                <div class="col-12 text-center text-lg-left px-5">
+                    <h1 id="heading" class="headline pt-4"></h1>
+                    <p id="description" class="py-3">
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="text-center py-5">
+                <a href="../profile">
+                    <p class="notes_lg">
+                        Madeline Johnston
+                    </p>
+                    <p id="portfolio_year" class="notes">
+
+                    </p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+    let itemTemplate = (image, description) => `<div class="content_row">
+                            <div class="row">
+                                <div class="col-12 col-lg-8 p-0 m-0">
+                                    <img class="preview" src="${image}">
+                                </div>
+                                <div class="col-12 col-lg-4 p-4 m-0">
+                                    <p class="notes vertically_align">
+                                        ${description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>`;
+
+    let data = [
+        {
+            'image':'../pictures/march/year2/korail/group_work_page1.jpg',
+            'description': "To begin the group analysis of Korail we looked at the growth of the informal settlement. The majority of the population of Korail are climate refugees, and the rate of population increase is rapid due to more frequent climate disasters. The rapid growth of Korail holds similar properties to the way salt crystals grow towards where the resources are.",
+        },
+        {
+            'image':'../pictures/march/year2/korail/group_work_page2.jpg',
+            'description': "A important aspect of Korail is their relationship with the surrounding Banani Lake. Soil and rubbish are dumped into the lake to create land to build more dwellings on. The dumping of plastic and human waste into the lake is polluting the water so much that algae has grown over the lake starving any other aquatic life of oxygen.",  
+        },
+        {
+            'image':'../pictures/march/year2/korail/group_work_page3.jpg',
+            'description': "Upon initial analysis, the morphology of the buildings in Korail seems random. However, deeper analysis allowed us to find patterns in the arrangement of the buildings which create commercial streets and other pathways between housing. This packing arrangement is comparable to the cell arrangement in the section of a leaf.", 
+        },
+        {
+            'image':'../pictures/march/year2/korail/group_work_page4.jpg',
+            'description': "To help us understand the social fabric of Korail, I created these maps that show the distribution of amenities within the slum. The maps use a Voronoi algorithm which shows the area around each amenity that is closer than to any other location. The larger cells are the areas lacking in amenities.",
+        },
+        {
+            'image':'../pictures/march/year2/korail/group_work_page5.jpg',
+            'description': "As a group we focused on situating our proposal to the west of Korail, to coincide with the natural growth we had established. To find a specific site to focus on we looked at the Voronoi cells in the west to see which area was most lacking in amenities. The area identified by the group for development is situated between Banani Lake West and Adeal Road, which is a key transport link.",
+        },
+        {
+            'image':'../pictures/march/year2/korail/individual1.jpg',
+            'description': "Using the group work as a foundation, I am focusing on re-establishing Korail’s relationship with Banani Lake. The method for doing this is through implementing the circular ecosystem described in the image. Following this ecosystem will lead to a cleaner future for Banani Lake and enhance the social fabric of Korail, a vision that is explored in the collage.",
+        },
+    ];
+
+    $('#heading').html('Green Korail');
+    $('#description').html(`Currently in progress, this design project is located in the largest slum within Dhaka, the capital of Bangladesh. As part of the computational unit, the design approach is different to previous projects by focusing on the logic and rules that define the built environment of Korail. The work below shows the development of the project up until January 2021, including group site analysis and the initial workings of my design. The manifesto of ‘Green Korail’ builds on the findings of the group work and aims to re-establish Korail’s relationship with Banani Lake. Through implementing a circular ecosystem and reducing the waste input into the lake the proposal will clean the water and allow Banani Lake to be used for vernacular farming practices, providing jobs and enhancing the social fabric of the settlement.`);
+
+    for (let item of data) {
+        $('#content').append(itemTemplate(item.image, item.description))
+    }
+
+    let currentTime = new Date();
+    let year = currentTime.getFullYear();
+    document.getElementById('portfolio_year').innerHTML = 'Portfolio - ' + year;
+
+    </script>
+</body>
+</html>
